@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import store from './utils/store';
 
 import Home from './pages/Home';
+import StoreFront from './pages/StoreFront'
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
@@ -57,6 +58,10 @@ function App() {
               <Route 
                 path="/" 
                 element={<Home />} 
+              />
+              <Route 
+                path="/storefront" 
+                element={<StoreFront />} 
               />
               <Route 
                 path="/login" 
