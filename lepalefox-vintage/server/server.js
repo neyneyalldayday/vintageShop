@@ -1,5 +1,5 @@
 const express = require('express');
-const { ApolloServer } = require('appollo-server-express');
+const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 
 
