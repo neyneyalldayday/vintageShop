@@ -31,7 +31,9 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--dark);
+  color: var(--light);
+  background-color: var(--dark);
+  margin-bottom: 50px;
 }
 
 h1,
@@ -183,6 +185,15 @@ input:focus {
 .px-1 {
   padding-right: var(--spacing-one);
   padding-left: var(--spacing-one);
+}
+
+#footer {
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right:0px;
+  margin-bottom: 0px;
 }
 
 .px-2 {
