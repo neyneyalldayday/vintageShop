@@ -1,15 +1,15 @@
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 :root {
-  --primary: #420d3d;
-  --secondary: #F3A847;
+  --primary: #c07eb9;
+  --secondary: #d9ab6f;
   --tertiary: #5b7dbe;
-  --light: #f1c659;
-  --dark: #171c1d;
+  --light: #eacb7f;
+  --dark: #080909;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -27,7 +27,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  /* font-family: 'Karla', sans-serif; */
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -226,9 +227,8 @@ input:focus {
   align-items: center;
   height: 100vh;  
   padding: 0 1rem;
-  position: relative;
-  margin-top: -80px;
-  color: #fff;
+  position: relative;  
+
 }
 
 .hero-bg {
@@ -238,9 +238,11 @@ input:focus {
   right: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 38vh;
   overflow: hidden;
-  margin-top: 150px;
+  margin-top: 150px;  
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  object-fit: contain;
 }
 
 
