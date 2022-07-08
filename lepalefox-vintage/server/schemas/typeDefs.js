@@ -3,7 +3,7 @@ const {gql} = require('apollo-server-express');
 
 const typeDefs = gql`
 type Category {
-    id: id
+    _id: ID
     name:String
 }
 
