@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
-//where is the build
+//where is the build dammit
 const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();
     server.applyMiddleware({ app });
