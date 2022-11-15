@@ -23,7 +23,7 @@ db.once('open', async () => {
             name: 'zebra print silk skirt',
             description:
               'dope ass zebra skirt!!!',
-            image: 'cookie-tin.jpg',
+            image: 'skirt.jpg',
             category: categories[0]._id,
             price: 2.99,
             quantity: 500
@@ -32,7 +32,7 @@ db.once('open', async () => {
             name: 'turquoise leather pants',
             description:
               'cop dem dope leather pants',
-            image: 'canned-coffee.jpg',
+            image: 'pants.jpg',
             category: categories[0]._id,
             price: 1.99,
             quantity: 500
