@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+
 import HeroPic from '../../images/vintagepic.jpg'
 
 export const Hero = () => {
@@ -11,8 +12,7 @@ export const Hero = () => {
             </div>            
         </div>
         <div className='hero-content'>
-            <div className='hero-items'>
-                
+            <div className='hero-items'>                
                 <Link to="/storefront" className='store-link'>Take a look</Link>               
             </div>
         </div>
