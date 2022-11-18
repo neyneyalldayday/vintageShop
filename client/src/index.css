@@ -6,9 +6,9 @@
 
 :root {
   --primary: #c07eb9;
-  --secondary: #d9ab6f;
+  --secondary: #90aea8;
   --tertiary: #5bb2be;
-  --light: #eacb7f;
+  --light: #e7d3a0;
   --dark: #080909;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
