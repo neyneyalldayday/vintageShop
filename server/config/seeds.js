@@ -24,7 +24,7 @@ db.once('open', async () => {
             description:
               'dope ass zebra skirt!!!',
             image: 'skirt.jpg',
-            category: categories[0]._id,
+            category: categories[3]._id,
             price: 2.99,
             quantity: 500
           },
@@ -33,7 +33,7 @@ db.once('open', async () => {
             description:
               'cop dem dope leather pants',
             image: 'pants.jpg',
-            category: categories[0]._id,
+            category: categories[3]._id,
             price: 1.99,
             quantity: 500
           },
