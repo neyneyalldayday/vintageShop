@@ -22,9 +22,10 @@ app.use(express.json());
 app.use(cors({
     origin: 'https://the-vintage-shop.vercel.app',
     methods: 'POST, GET, OPTIONS',
-    allowedHeaders: 'Content-Type'
+    allowedHeaders: 'Content-Type, Authorization'
   }));
   
+app.options('*', cors());
 
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
