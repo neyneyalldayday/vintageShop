@@ -1,6 +1,6 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
-const cors = require('./cors');
+const cors = require('cors');
 const path = require('path');
 
 
@@ -19,7 +19,12 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cors)
+app.use(cors({
+    origin: 'https://the-vintage-shop.vercel.app',
+    methods: 'POST, GET, OPTIONS',
+    allowedHeaders: 'Content-Type'
+  }));
+  
 
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
