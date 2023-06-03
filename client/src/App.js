@@ -23,7 +23,7 @@ import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
 const httpLink = createHttpLink({
-  uri: 'https://the-vintage-shop-98mlizkaw-neyneyalldayday.vercel.app/graphql',
+  uri: 'https://the-vintage-shop.vercel.app',
 });
 
 const authLink = setContext((_, { headers }) => {

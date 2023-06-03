@@ -14,6 +14,12 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware,
   debug: true,
+  cors: {
+    origin: ['http://localhost:3000','https://the-vintage-shop.vercel.app'],
+    methods: ['POST', "GET", "OPTIONS"],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  },
+ 
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -25,14 +31,8 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('/client/build'));
 }
 
-// Enable CORS
-app.use(cors({
-  origin: 'https://the-vintage-shop.vercel.app',
-  methods: 'POST, GET, OPTIONS',
-  allowedHeaders: 'Content-Type, Authorization',
-}));
 
-app.options('*', cors());
+app.options('/graphql', cors());
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
-  server.applyMiddleware({ app });
+  server.applyMiddleware({ app , cors:true });
 
   db.once('open', () => {
     app.listen(PORT, () => {
