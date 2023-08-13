@@ -20,7 +20,7 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row nav-not-logged">
           <li className="mx-1">
             <Link to="/signup">Signup</Link>
           </li>
@@ -33,13 +33,15 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
+    <header className="flex-row px-1" id="header">
       <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">
+        <Link  to="/" >
+          <span role="img" aria-label="little-fox">
             🦊 
           </span>
+          <span>
           LePaleFoxVintage
+          </span>          
         </Link>
       </h1>
 

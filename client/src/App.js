@@ -9,7 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import { Provider } from 'react-redux';
-import store from './utils/store';
+import store from './redux/store';
 
 import Home from './pages/Home';
 import StoreFront from './pages/StoreFront'
@@ -23,7 +23,7 @@ import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
 const httpLink = createHttpLink({
-  uri: 'https://the-vintage-shop.vercel.app',
+  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {

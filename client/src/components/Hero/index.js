@@ -16,7 +16,6 @@ export const Hero = () => {
                 <Link to="/storefront" className='store-link'>Take a look</Link>               
             </div>
         </div>
-
     </div>
   )
 }

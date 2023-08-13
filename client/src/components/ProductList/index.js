@@ -45,25 +45,27 @@ function ProductList() {
   }
 
   return (
-    <div className="my-2">
+    <div className='product-Container'>
       <h2>Our Products:</h2>
-      {state.products.length ? (
-        <div className="flex-row">
-          {filterProducts().map((product) => (
-            <ProductItem
-              key={product._id}
-              _id={product._id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              quantity={product.quantity}
-            />
-          ))}
-        </div>
-      ) : (
-        <h3>You haven't added any products yet!</h3>
-      )}
-      {loading ? <img src={''} alt="loading" /> : null}
+      <div className="product-list">        
+        {state.products.length ? (
+          <div className='product-grid'>
+            {filterProducts().map((product) => (
+              <ProductItem
+                key={product._id}
+                _id={product._id}
+                image={product.image}
+                name={product.name}
+                price={product.price}
+                quantity={product.quantity}
+              />
+            ))}
+          </div>
+        ) : (
+          <h3>You haven't added any products yet!</h3>
+        )}
+        {loading ? <img src={""} alt="loading" /> : null}
+      </div>
     </div>
   );
 }
