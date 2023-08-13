@@ -107,7 +107,7 @@ db.once('open', async () => {
             name: 'pants',
             description:
               'cop dem dope  pants',
-            image: 'pants4.jpg',
+            image: 'pants5.jpg',
             category: categories[3]._id,
             price: 1.99,
             quantity: 500
@@ -116,7 +116,16 @@ db.once('open', async () => {
             name: 'pants',
             description:
               'cop dem dope  pants',
-            image: 'pants5.jpg',
+            image: 'pants6.jpg',
+            category: categories[3]._id,
+            price: 1.99,
+            quantity: 500
+          },
+          {
+            name: 'pants',
+            description:
+              'cop dem dope  pants',
+            image: 'pants7.jpg',
             category: categories[3]._id,
             price: 1.99,
             quantity: 500
