@@ -104,6 +104,30 @@ button:focus-visible {
 .nav-item{
   list-style: none;
 }
+
+.history-container{
+  padding: 2rem;
+}
+
+.flex-row-history{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.flex-row-history  > *{
+  flex: 1;
+}
+
+.flex-row-history img {
+  width: 100%;
+}
+
+.history-product-wrap{
+  max-width: 35rem;
+  min-width: 15rem;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

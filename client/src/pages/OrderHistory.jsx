@@ -22,15 +22,17 @@ function OrderHistory() {
               Order History for {user.firstName} {user.lastName}
             </h2>
             {user.orders.map((order) => (
-              <div key={order._id} className="my-2">
+              <div key={order._id} className="my-2 history-container">
                 <h3>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
-                <div className="flex-row">
+                <div className="flex-row-history">
                   {order.products.map(({ _id, image, name, price }, index) => (
                     <div key={index} className="card px-1 py-1">
-                      <Link to={`/products/${_id}`}>
+                      <Link  to={`/products/${_id}`}>
+                        <div className='history-product-wrap'>
                         <img alt={name} src={`/images/${image}`} />
+                        </div>                        
                         <p>{name}</p>
                       </Link>
                       <div>
