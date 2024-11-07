@@ -1,162 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@100&family=Poppins&family=Tilt+Prism&display=swap');
-
-
-
 :root {
-  --text: #1C1C1C;
-  --main-background: #FAFAFF;
-  --secondary: #EEF0F2;
-  --detail-one: #ECEBE4;
-  --detail-two: #DADDD8;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
 button {
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
-  border: none;
-  outline: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
-  margin: 0 1px;
-  background-color: var(--secondary);
-  box-shadow:  4px 4px 8px rgba(0,0,0,0.4);
+  transition: border-color 0.25s;
 }
-
 button:hover {
-  opacity: .8;
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-button[disabled] {
-  cursor: default;
-  opacity: .8;
-}
 
-
-body{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Big Shoulders Display', cursive;
-font-family: 'Outfit', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Tilt Prism', cursive;
-}
-
-.nav-not-logged{
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-not-logged li{
-  list-style: none;
+.img-container-product{
+  max-width: 30rem;
+  min-width: 5rem;
  
 }
 
-.nav-not-logged li:visited{
-  text-decoration: none;
+
+.product-img{
+  width: 100%;
 }
 
-.image-bg{
-  max-width: 50rem;
-  min-width: 25rem;
-}
-
-.image-bg img{
-  width: 100%
-}
-
-.hero-container{
+.product-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
- 
 }
 
-#header{
+.product-info{
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  gap: 3rem;
   padding: 1rem;
-  box-shadow:  4px 4px 8px rgba(0,0,0,0.4);
-  background-color: var(--detail-two);
   flex-wrap: wrap;
-}
-
-a{
-  text-decoration: none;
-  color: var(--text);
-}
-
-a.store-link{
-  background-color: var(--secondary);
-  font-size: 2em;
-  font-weight: bold;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
-}
-
-#footer{
-  display: flex;
-  padding: 2rem;
-  bottom: 0;
-  background-color: var(--detail-one);
- 
-}
-
-category-container{
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-}
-
-.categories{
-  display: flex;
-  gap: 1rem;  
+  justify-content: center;
 }
 
 .main-container{
   display: flex;
-  flex-direction: column;
-  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.product-list{
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 2rem;
+.main-container * > {
+  flex: 1;
 }
 
-
-
-.product-grid{
-  width: 50rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
-  grid-gap: 20px; 
+.my-2{
+  text-align: center;
 }
 
-img {
-  max-width: 100%;
+.category-menu{
+  text-align: center;
 }
 
-.card{
-  border-radius: 5px;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
-  padding: .25rem;
+.flex-row-nav{
+  display: flex;
+  gap: 1rem;
 }
 
-
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: 1fr; /* Switch to a single column at max-width 768px */
+.nav-item{
+  list-style: none;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
   }
 }
-
-
-
-

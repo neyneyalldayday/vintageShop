@@ -25,6 +25,11 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
+  role:{
+    type: String,
+    enum: ['user', 'admin'],
+    default: 'user'
+  },
   orders: [Order.schema]
 });
 
@@ -41,6 +46,10 @@ userSchema.pre('save', async function(next) {
 userSchema.methods.isCorrectPassword = async function(password) {
     return await bcrypt.compare(password, this.password);
 };
+
+userSchema.methods.isAdmin = function() {
+  return this.role === 'admin';
+}
 
 const User = mongoose.model('User', userSchema);
 
