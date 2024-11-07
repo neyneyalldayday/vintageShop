@@ -13,7 +13,7 @@ import {
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
-
+// details
 function Detail() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
