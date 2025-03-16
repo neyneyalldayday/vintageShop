@@ -1,4 +1,6 @@
 .site-title{
     text-align: center;
-    border: solid black;
+    padding: 1rem;
+    box-shadow: 4px 4px 8px rba(0,0,0,0.9);
+    background-color: #706677;
 }
