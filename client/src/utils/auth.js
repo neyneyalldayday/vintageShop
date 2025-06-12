@@ -43,10 +43,19 @@ class AuthService {
 
 
   isAdmin() {
-    console.log(decode(this.getToken()), 'you an admin???')
-    const creds = decode(this.getToken())
-    if (creds.data.username === "potato" ){
-        return true;
+    const token = this.getToken();
+    if (!token) {
+      console.log('No token found');
+      return false;
+    }
+
+    try {
+      const creds = decode(token);
+      console.log(creds, "you an admin???");
+      return creds.data.username;
+    } catch ( err ) {
+      console.error('invalid Token: ', err);
+      return false;
     }
   }
 }

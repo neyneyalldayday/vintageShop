@@ -6,6 +6,7 @@ function Jumbotron({ children }) {
           clear: 'both',
           paddingTop: 120,
           textAlign: 'center',
+          backgroundColor: 'blue'
         }}
       >        
         {children}

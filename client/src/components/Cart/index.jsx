@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51JKnrdJCLEsDyud23BzCg1ea7W8L14v3UTFPv8gEPpXtu6JOcjJl7TefMNJD6pF3SvC13BjXTpyBorTg3eE3CUql00vprCZAlq');
 
 const Cart = () => {
   const dispatch = useDispatch();

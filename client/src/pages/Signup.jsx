@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
+import isAdmin from '../components/isAdmin'
 import { ADD_USER } from '../utils/mutations';
 
 function Signup(props) {
@@ -14,7 +15,7 @@ function Signup(props) {
     });
 
     const [error, setError] = useState(null)
-    console.log(error)
+    console.log(error, "this shit right here")
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -86,7 +87,7 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        {Auth.isAdmin() && (
+        {isAdmin() && (
           <div className='flex-row space-between my-2'>
             <label htmlFor='role'>Role: </label>
               <select name="role" id="role" onChange={handleChange}>
